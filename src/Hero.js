@@ -36,6 +36,7 @@ object-fit: cover;
 height: 100%;
 }
 
+
 `;
 
 const HeadlineContainer = styled.div`
@@ -52,6 +53,14 @@ align-items: center;
   justify-content: flex-end;
   position: relative;
   bottom: 4vh;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 580px) {
+  width: 100%;
+  justify-content: flex-end;
+  position: relative;
+  ${'' /* bottom: 4vh; */}
+  bottom: -5vh;
 }
 
 @media only screen and (max-aspect-ratio: 568/319) {
