@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-class App extends Component {
+import Colors from './Colors.js';
+
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container>
         Das Irischen Bände
-      </div>
+
+      </Container>
     );
   }
 }
 
-export default App;
+const Container = styled.div`
+  height: 100%;
+  background: ${Colors.background};
+  color: ${Colors.bodyCopy};
+`;
