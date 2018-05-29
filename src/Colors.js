@@ -1,4 +1,4 @@
-import Color from 'color';
+// import Color from 'color';
 
 const base = {
   background: '#050f05',

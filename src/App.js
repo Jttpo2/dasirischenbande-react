@@ -34,15 +34,15 @@ a {
 }
 `;
 
-const Spacer = styled.div`
-  width: 100%;
-  height: 5vh;
-  background: ${Colors.background};
-
-  position: relative;
-  top: 0px;
-  z-index: 1;
-`;
+// const Spacer = styled.div`
+//   width: 100%;
+//   height: 5vh;
+//   background: ${Colors.background};
+//
+//   position: relative;
+//   top: 0px;
+//   z-index: 1;
+// `;
 
 const FooterContainer = styled.div`
 display: flex;
