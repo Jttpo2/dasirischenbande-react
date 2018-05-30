@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { SocialIcon } from 'react-social-icons';
 
 import Colors from './Colors.js';
 import Hero from './Hero.js';
 import heroImage from './img/hakelverket.png';
 import Songkick from './Songkick.js';
 
+const socialUrls = [
+  'https://facebook.com/dasirischenbande',
+  'https://www.instagram.com/dasirischenbande/',
+  'http://www.bandsintown.com/DasIrischenBände',
+  'https://soundcloud.com/das-irischen-b-nde',
+  'https://www.youtube.com/channel/UCeUvfwE144PBBumpN1Wn2cg',
+]
+
 export default class App extends Component {
   render() {
+
+    const socialIcons = socialUrls.map((url) => <SocialIcon url={url} />);
+
     return (
       <Container>
         <Hero image={heroImage} />
         {/* <Spacer /> */}
-        <Songkick />
+        <MainContainer>
+          <Songkick />
+        </MainContainer>
+
         <FooterContainer>
-          <a href="mailto:info@dasirischenbände.se">info@dasirischenbände.se</a>
-          <a href="https://facebook.com/dasirischenbande">facebook.com/dasirischenbande</a>
+          <SocialIconsContainer>{socialIcons}</SocialIconsContainer>
         </FooterContainer>
       </Container>
     );
@@ -44,6 +58,15 @@ a {
 //   z-index: 1;
 // `;
 
+const MainContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 const FooterContainer = styled.div`
 display: flex;
 flex-flow: column;
@@ -62,4 +85,8 @@ margin: 1vh;
 z-index: 1;
 position: relative;
 bottom: 35px;
+`;
+
+const SocialIconsContainer = styled.div`
+
 `;
