@@ -18,13 +18,13 @@ const socialUrls = [
 export default class App extends Component {
   render() {
 
-    const socialIcons = socialUrls.map((url) => <SocialIcon url={url} />);
+    const socialIcons = socialUrls.map((url, index) => <SocialIcon url={url} key={index}/>);
 
     return (
       <Container>
         <Hero image={heroImage} />
         {/* <Spacer /> */}
-        <MainContainer>
+        <MainContainer>        
           <Songkick />
         </MainContainer>
 

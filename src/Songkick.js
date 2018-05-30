@@ -12,7 +12,9 @@ export default class Songkick extends React.Component {
         data-theme="dark"
         data-track-button="on"
         data-detect-style="true"
-        data-background-color={Colors.background}></a>
+        // '\u00A0' used as empty looking placeholder
+        // to get rid of console warning
+        data-background-color={Colors.background}>{'\u00A0'}</a>
       </Container>
     );
   }
