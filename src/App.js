@@ -24,13 +24,13 @@ export default class App extends Component {
       <Container>
         <Hero image={heroImage} />
         {/* <Spacer /> */}
-        <MainContainer>        
-          <Songkick />
-        </MainContainer>
 
         <FooterContainer>
           <SocialIconsContainer>{socialIcons}</SocialIconsContainer>
         </FooterContainer>
+        <MainContainer>
+          <Songkick />
+        </MainContainer>
       </Container>
     );
   }
@@ -82,9 +82,9 @@ margin: 1vh;
 }
 
 // Hack to get rid of line underneath Songkick component
-z-index: 1;
+${'' /* z-index: 1;
 position: relative;
-bottom: 35px;
+bottom: 35px; */}
 `;
 
 const SocialIconsContainer = styled.div`

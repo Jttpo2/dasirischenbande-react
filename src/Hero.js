@@ -35,8 +35,6 @@ object-fit: cover;
 @media only screen and (orientation: landscape) {
 height: 100%;
 }
-
-
 `;
 
 const HeadlineContainer = styled.div`
@@ -57,10 +55,10 @@ align-items: center;
 
 @media only screen and (orientation: portrait) and (min-width: 580px) {
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
   ${'' /* bottom: 4vh; */}
-  bottom: -5vh;
+  ${'' /* bottom: -5vh; */}
 }
 
 @media only screen and (max-aspect-ratio: 568/319) {
@@ -69,14 +67,18 @@ align-items: center;
 `;
 
 const Headline = styled.h1`
-font-size: calc(30px + 12vw);
+font-size: calc(30px + 8vw + 4vh);
 text-shadow: 2px 2px ${Colors.background};
 text-transform: uppercase;
 
 z-index: 1;
 
 @media only screen and (orientation: landscape) {
-font-size: calc(1px + 9vw);
+font-size: calc(1px + 6vw + 3vh);
 margin-bottom: 0px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 580px) {
+font-size: calc(30px + 4vw + 3vh);
 }
 `;
